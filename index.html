@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse | Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>⚡ CampusPulse</h2>
+    <p class="menu-title">MENU</p>
+    <a href="#dashboard">▦ Dashboard</a>
+    <a href="#tasks">✓ My Tasks</a>
+    <a href="#goals">🎯 Goals</a>
+    <a href="#focus">⏱ Focus Room</a>
+    <a href="#notes">📝 Quick Notes</a>
+    <div class="sidebar-bottom">Your journey. Your success.</div>
+</div>
+
+<main class="main" id="dashboard">
+
+    <header>
+        <div>
+            <p class="welcome">YOUR PERSONAL SPACE</p>
+            <h1>Hey, Student! 👋</h1>
+            <p>Make today count. Small steps create big achievements.</p>
+        </div>
+        <div class="date" id="date"></div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <span>YOUR DAILY MOTIVATION</span>
+            <h2>Dream big. Start small.<br>Stay consistent.</h2>
+            <p>Every task you complete brings you closer to your goals.</p>
+        </div>
+        <div class="hero-icon">🚀</div>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <span>📚</span>
+            <p>Total Tasks</p>
+            <h2 id="total">0</h2>
+        </div>
+        <div class="card">
+            <span>✅</span>
+            <p>Completed</p>
+            <h2 id="completed">0</h2>
+        </div>
+        <div class="card">
+            <span>🎯</span>
+            <p>Goals</p>
+            <h2 id="goalCount">0</h2>
+        </div>
+        <div class="card">
+            <span>🔥</span>
+            <p>Productivity</p>
+            <h2 id="productivity">0%</h2>
+        </div>
+    </section>
+
+    <section class="panel" id="tasks">
+        <h2>📚 My Study Planner</h2>
+        <div class="input-row">
+            <input id="taskInput" placeholder="Enter your next task...">
+            <button onclick="addTask()">+ Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+    </section>
+
+    <section class="panel" id="goals">
+        <h2>🎯 My Goals</h2>
+        <div class="input-row">
+            <input id="goalInput" placeholder="Enter your goal...">
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+        <ul id="goalList"></ul>
+    </section>
+
+    <section class="panel focus" id="focus">
+        <h2>⏱ Focus Room</h2>
+        <p>Take 25 minutes to focus on what matters.</p>
+        <div id="timer">25:00</div>
+        <button onclick="startTimer()">Start Focus</button>
+        <button class="secondary" onclick="resetTimer()">Reset</button>
+    </section>
+
+    <section class="panel" id="notes">
+        <h2>📝 Quick Notes</h2>
+        <textarea id="notesInput" placeholder="Write your ideas and important notes here..."></textarea>
+        <button onclick="saveNotes()">Save Notes</button>
+        <p id="savedMessage"></p>
+    </section>
+
+    <footer>Made with ❤️ | CampusPulse © 2026</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
